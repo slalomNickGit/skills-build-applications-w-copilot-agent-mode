@@ -1,1 +1,0 @@
-Refactor settings and URLs to support dynamic BASE_URL and custom API root endpoint
