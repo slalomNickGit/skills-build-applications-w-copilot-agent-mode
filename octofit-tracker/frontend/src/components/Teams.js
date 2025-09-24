@@ -15,13 +15,28 @@ const Teams = () => {
   }, [apiUrl]);
 
   return (
-    <div>
-      <h2>Teams</h2>
-      <ul>
-        {teams.map((team, idx) => (
-          <li key={idx}>{team.name}</li>
-        ))}
-      </ul>
+    <div className="mb-4">
+      <div className="card shadow">
+        <div className="card-header bg-info text-white">
+          <h2 className="mb-0">Teams</h2>
+        </div>
+        <div className="card-body">
+          <table className="table table-striped table-bordered">
+            <thead className="table-light">
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              {teams.map((team, idx) => (
+                <tr key={idx}>
+                  <td>{team.name}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 };
